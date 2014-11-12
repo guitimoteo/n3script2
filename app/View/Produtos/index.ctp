@@ -13,7 +13,7 @@
 			<!--<th><?php // echo $this->Paginator->sort('unidade'); ?></th>-->
 			<!--<th><?php // echo $this->Paginator->sort('observacoes'); ?></th>-->
 			<!--<th><?php // echo $this->Paginator->sort('data'); ?></th>-->
-			<!--<th class="actions"><?php // echo __('Actions'); ?></th>-->
+			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -33,11 +33,11 @@
 		<!--<td><?php // echo h($produto['Produto']['unidade']); ?>&nbsp;</td>-->
 		<!--<td><?php // echo h($produto['Produto']['observacoes']); ?>&nbsp;</td>-->
 		<!--<td><?php // echo h($produto['Produto']['data']); ?>&nbsp;</td>-->
-		<!--<td class="actions">-->
+		<td class="actions">
 			<?php // echo $this->Html->link(__('View'), array('action' => 'view', $produto['Produto']['id'])); ?>
-			<?php // echo $this->Html->link(__('Edit'), array('action' => 'edit', $produto['Produto']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $produto['Produto']['id'])); ?>
 			<?php // echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $produto['Produto']['id']), array(), __('Are you sure you want to delete # %s?', $produto['Produto']['id'])); ?>
-		<!--</td>-->
+		</td>
 	</tr>
 <?php endforeach; ?>
 	</tbody>
