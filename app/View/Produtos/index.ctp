@@ -8,7 +8,8 @@
 			<!--<th><?php // echo $this->Paginator->sort('cnpj'); ?></th>-->
 			<th><?php echo $this->Paginator->sort('descricao'); ?></th>
 			<th><?php echo $this->Paginator->sort('quantidade'); ?></th>
-			<th><?php echo $this->Paginator->sort('estoque'); ?></th>
+                        <th><?php echo "Saldo atual";// echo $this->Paginator->sort('estoque'); ?></th>
+                        <th><?php echo "Situação";?></th>
 			<!--<th><?php // echo $this->Paginator->sort('unidade'); ?></th>-->
 			<!--<th><?php // echo $this->Paginator->sort('observacoes'); ?></th>-->
 			<!--<th><?php // echo $this->Paginator->sort('data'); ?></th>-->
@@ -23,7 +24,12 @@
 		<!--<td><?php // echo h($produto['Produto']['cnpj']); ?>&nbsp;</td>-->
 		<td><?php echo h($produto['Produto']['descricao']); ?>&nbsp;</td>
 		<td><?php echo h($produto['Produto']['quantidade']); ?>&nbsp;</td>
-		<td><?php echo h($produto['Produto']['estoque']); ?>&nbsp;</td>
+		<td><?php echo h($produto['Produto']['estoque'] - $produto['Produto']['pedido']); ?>&nbsp;</td>
+		<td><?php if($produto['Produto']['quantidade']>($produto['Produto']['estoque'] - $produto['Produto']['pedido'])){
+                            echo 'Reposição';}
+                            else{
+                            echo 'Normal';
+                            }; ?>&nbsp;</td>
 		<!--<td><?php // echo h($produto['Produto']['unidade']); ?>&nbsp;</td>-->
 		<!--<td><?php // echo h($produto['Produto']['observacoes']); ?>&nbsp;</td>-->
 		<!--<td><?php // echo h($produto['Produto']['data']); ?>&nbsp;</td>-->

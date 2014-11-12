@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: Nov 11, 2014 as 07:12 PM
+-- Tempo de Geração: Nov 12, 2014 as 04:55 AM
 -- Versão do Servidor: 5.1.44
 -- Versão do PHP: 5.3.1
 
@@ -32,18 +32,22 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `fornecedor` varchar(20) NOT NULL,
   `cnpj` varchar(45) NOT NULL,
   `descricao` varchar(45) NOT NULL,
-  `quantidade` varchar(11) NOT NULL,
-  `estoque` varchar(11) NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `estoque` int(11) NOT NULL,
+  `pedido` int(11) DEFAULT NULL,
   `unidade` varchar(20) NOT NULL,
   `observacoes` varchar(100) NOT NULL,
   `data` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1001 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1003 ;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
+INSERT INTO `produtos` (`id`, `fornecedor`, `cnpj`, `descricao`, `quantidade`, `estoque`, `pedido`, `unidade`, `observacoes`, `data`) VALUES
+(1001, 'asdf', '123121321', 'asdf', 4, 12, 6, '11', 'qwer', '12/12/2014'),
+(1002, 'asdf', '123121321', 'asdf', 11, 12, 14, 'Pacote', 'cvbncvbn', '12/12/2014');
 
 -- --------------------------------------------------------
 
@@ -64,3 +68,5 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `password`, `role`) VALUES
+(0, 'fatec', 'fatec@fatec', 'cb8a3a4973d7a110cf493baa2bad71c45641e957', 'admin');
