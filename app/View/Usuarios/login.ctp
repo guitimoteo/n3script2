@@ -4,8 +4,8 @@
 <?php echo $this->Form->create('Usuario');?>
     <fieldset>
         <legend><?php echo __('Por favor, insira o seu Email e senha '); ?></legend>
-        <?php echo $this->Form->input('email');
-              echo $this->Form->input('password');
+        <?php echo $this->Form->input('email',array('label'=>'Email<br>'));
+              echo $this->Form->input('password',array('label'=>'Senha<br>'));
     ?>
     </fieldset>
 <?php echo $this->Form->end(__('Login'));?>

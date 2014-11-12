@@ -111,6 +111,7 @@ class UsuariosController extends AppController {
      * @return type
      */
     public function login() {
+        $this->layout = '';
         CakeLog::write('info', 'UsuariosController login()');
         $this->set('title_for_layout', __('Log in'));
         if ($this->request->is('post')) {
