@@ -16,7 +16,7 @@ function newDoc() {
 //		echo $this->Form->input('cnpj');
 		echo $this->Form->input('descricao',array('label'=>'Descrição do produto<br>'));
 		echo $this->Form->input('estoque',array('label'=>'Estoque atual<br>'));
-		echo $this->Form->input('quantidade',array('label'=>'Quantidade solicitada<br>'));
+		echo $this->Form->input('pedido',array('label'=>'Quantidade solicitada<br>'));
 //		echo $this->Form->input('unidade');
 //		echo $this->Form->input('observacoes');
 		echo $this->Form->input('data',array('label'=>'Data da solicitação<br>'));
