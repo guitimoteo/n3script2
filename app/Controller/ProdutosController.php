@@ -27,6 +27,7 @@ class ProdutosController extends AppController {
      */
     public function index() {
         $this->loadModel('Usuario');
+        $this->layout = '';
         $this->Produto->recursive = 0;
         $this->set('produtos', $this->Paginator->paginate());
     }
